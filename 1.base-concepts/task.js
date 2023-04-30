@@ -1,5 +1,5 @@
 "use strict";
-function solveEquation(a, b, c) {
+function solveEquation(a,b,c) {
   let arr = []
   if (a == 0)
     return false
