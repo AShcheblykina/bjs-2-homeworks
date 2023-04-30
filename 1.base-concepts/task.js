@@ -15,7 +15,7 @@ function solveEquation(a,b,c) {
   }
   return arr;
 };
-console.log(solveEquation(+'5',+'15', +'7'));
+console.log(solveEquation(+5,+15,+7));
 
 function calculateTotalMortgage(percent,contribution,amount, countMonths) {
   let mPercent = (percent / 100) / 12; 
@@ -26,5 +26,5 @@ function calculateTotalMortgage(percent,contribution,amount, countMonths) {
   return total;
 };
 
-console.log(calculateTotalMortgage(+'15',+'0',+'10000',+'36'));
+console.log(calculateTotalMortgage(+15,+0,+10000,+36));
 
