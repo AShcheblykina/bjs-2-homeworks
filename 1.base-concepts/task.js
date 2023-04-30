@@ -1,5 +1,5 @@
 "use strict";
-function solveEquation(a,b,c) {
+function solveEquation(+'a',+'b',+'c') {
   let arr = []
   if (a == 0)
     return false
@@ -15,9 +15,9 @@ function solveEquation(a,b,c) {
   }
   return arr;
 };
-console.log(solveEquation(+5,+15,+7));
+console.log(solveEquation(5,15,7));
 
-function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+function calculateTotalMortgage(+'percent', +'contribution', +'amount', +'countMonths') {
   let mPercent = (percent / 100) / 12; 
   let bodyCredit = amount - contribution;
   let mPayment = bodyCredit * (mPercent + (mPercent / (((1 + mPercent) ** countMonths) - 1)));
@@ -26,5 +26,5 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   return total;
 };
 
-console.log(calculateTotalMortgage(+15,+0,+10000,+36));
+console.log(calculateTotalMortgage(15,0,10000,36));
 
