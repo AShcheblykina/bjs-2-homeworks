@@ -1,6 +1,6 @@
 "use strict";
 
-function solveEquation(a, b, c) {
+function solveEquation Number(a, b, c) {
 	let arr = []
 	if (a == 0)
 		return false
@@ -18,7 +18,7 @@ function solveEquation(a, b, c) {
 };
 console.log(solveEquation());
 
-function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+function calculateTotalMortgage Number(percent, contribution, amount, countMonths) {
 	let mPercent = (percent / 100) / 12;
 	let bodyCredit = amount - contribution;
 	let mPayment = bodyCredit * (mPercent + (mPercent / (((1 + mPercent) ** countMonths) - 1)));
