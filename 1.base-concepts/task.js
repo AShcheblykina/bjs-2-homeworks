@@ -1,6 +1,6 @@
 "use strict";
 
-function solveEquation Number(a, b, c) {
+function solveEquation(a, b, c) {
 	let arr = []
 	if (a == 0)
 		return false
@@ -16,9 +16,9 @@ function solveEquation Number(a, b, c) {
 	}
 	return arr;
 };
-console.log(solveEquation());
+console.log(solveEquation Number());
 
-function calculateTotalMortgage Number(percent, contribution, amount, countMonths) {
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let mPercent = (percent / 100) / 12;
 	let bodyCredit = amount - contribution;
 	let mPayment = bodyCredit * (mPercent + (mPercent / (((1 + mPercent) ** countMonths) - 1)));
@@ -26,5 +26,5 @@ function calculateTotalMortgage Number(percent, contribution, amount, countMonth
 	let total = tAmount.toFixed(2);
 	return total;
 };
-console.log(calculateTotalMortgage());
+console.log(calculateTotalMortgage Number());
 
