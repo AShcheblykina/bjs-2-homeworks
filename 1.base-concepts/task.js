@@ -16,7 +16,7 @@ function solveEquation(a, b, c) {
 	}
 	return arr;
 };
-console.log(solveEquation(''));
+console.log(solveEquation());
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let mPercent = (percent / 100) / 12;
@@ -26,5 +26,5 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let total = tAmount.toFixed(2);
 	return total;
 };
-console.log(calculateTotalMortgage(''));
+console.log(calculateTotalMortgage());
 
