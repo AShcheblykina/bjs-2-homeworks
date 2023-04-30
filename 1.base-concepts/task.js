@@ -13,18 +13,19 @@ function solveEquation(a,b,c) {
     arr.push((-b + Math.sqrt(dis)) / (2 * a));
     arr.push((-b - Math.sqrt(dis)) / (2 * a));
   }
-  return 'arr';
-};
+  return arr;
+}
+;
 console.log(solveEquation(10,5,7));
 
-function calculateTotalMortgage(percent,contribution,amount, countMonths) {
+function calculateTotalMortgage(percent,contribution,amount,countMonths) {
   let mPercent = (percent / 100) / 12; 
   let bodyCredit = amount - contribution;
   let mPayment = bodyCredit * (mPercent + (mPercent / (((1 + mPercent) ** countMonths) - 1)));
   let tAmount = mPayment * countMonths;
   let total = tAmount.toFixed(2);
-  return 'total';
-};
-
+  return total;
+}
+;
 console.log(calculateTotalMortgage(15,0,10000,36));
 
