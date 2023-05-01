@@ -3,11 +3,11 @@
 function solveEquation(a, b, c) {
 	let arr = []
 	if (a == 0)
-		return false
+		return arr
 	let dis = b ** 2 - 4 * a * c;
 	console.log('D = ' + dis);
 	if (dis < 0)
-		return false;
+		return arr;
 	if (dis == 0)
 		arr.push(-b / (2 * a));
 	if (dis > 0) {
