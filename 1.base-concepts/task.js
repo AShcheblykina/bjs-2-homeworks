@@ -23,8 +23,8 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let bodyCredit = amount - contribution;
 	let mPayment = bodyCredit * (mPercent + (mPercent / (((1 + mPercent) ** countMonths) - 1)));
 	let tAmount = mPayment * countMonths;
-	tAmount = tAmount.toFixed(2);
-	return parseFloat(tAmount);
+	let total = tAmount.toFixed(2);
+	return parseFloat(total);
 	t
 	
 };
