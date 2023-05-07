@@ -72,7 +72,7 @@ function averageEvenElementsWorker(...arr) {
 			sumEvenElement += arr[i];
 			countEvenElement++;
 		}
-		average = +(sumEvenElement / countEvenElement).toFixed(2);
+		average = (sumEvenElement / countEvenElement).toFixed(2);
 	}
 	return average;
 }
