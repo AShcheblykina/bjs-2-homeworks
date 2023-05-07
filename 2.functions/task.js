@@ -14,7 +14,7 @@ function getArrayParams(...arr) {
 	return {
 		min: min,
 		max: max,
-		avg: (Number)avg
+		avg:  Number(avg)
 	};
 }
 
