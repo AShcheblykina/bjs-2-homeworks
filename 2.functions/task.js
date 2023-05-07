@@ -1,5 +1,4 @@
 function getArrayParams(...arr) {
-	let avg;
 	let sum = 0;
 	let min = Infinity;
 	let max = -Infinity;
