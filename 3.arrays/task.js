@@ -5,6 +5,9 @@ console.log(compareArrays([8, 1, 2], [8, 1, 2]));
 
 function getUsersNamesInAgeRange(users, gender) {
 	let filter = users.filter(user => user.gender === gender);
+	if (filter.length === 0) {
+		return 0;
+	}
 	let total = filter.reduce((sum, user) => sum + user.age, 0);
 	let avg = total / filter.length;
 	return avg;
