@@ -6,7 +6,7 @@ function parseCount(avg) {
 	return mean;
 }
      try {
-console.log(parseCount("123"));
+     console.log(parseCount());
    } catch (error) {
      console.log(error.message);
 }
@@ -14,16 +14,14 @@ console.log(parseCount("123"));
 
 function validateCount(average){
     try {
-        console.log("мы в блоке try");
         console.log(parseCount(average));
     } catch(error){
-      console.log(error);
       console.log("ОШИБКА: Введено не валидное значение!!!")  
     }
     
 }
 
-  validateCount("fhnfgh")
+  validateCount("uihj")
 
 
 class Triangle{
@@ -72,4 +70,4 @@ function getTriangle(leg_1, leg_2, hypotenuse){
     }
 }
 
-getTriangle(2,2,2)
+getTriangle(4,4,4);
