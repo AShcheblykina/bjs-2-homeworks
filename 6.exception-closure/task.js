@@ -59,7 +59,7 @@ function getTriangle(leg_1, leg_2, hypotenuse) {
     console.log("Периметр треугольника: ", perimeter);
     console.log("Площадь треугольника: ", area);
   } catch (error) {
-    console.log("ОШИБКА ОБРАБОТКИ ДАННЫХ: ", error.message);
+     console.log("Ошибка! Треугольник не существует", error.message);
   }
 }
 
