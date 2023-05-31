@@ -6,9 +6,9 @@ function parseCount(avg) {
   return mean;
 }
 
-function validateCount(average) {
+function validateCount() {
   try {
-    console.log(parseCount(average));
+    console.log(parseCount());
   } catch (error) {
     console.log("ОШИБКА: Введено невалидное значение!!!");
   }
