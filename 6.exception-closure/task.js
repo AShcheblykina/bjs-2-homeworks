@@ -53,8 +53,8 @@ function getTriangle(leg_1, leg_2, hypotenuse) {
     let perimeter = triangle.perimeter;
     let area = triangle.area;
 
-    console.log("Периметр треугольника: ", perimeter);
-    console.log("Площадь треугольника: ", area);
+    console.log("Периметр треугольника: ", Number(perimeter));
+    console.log("Площадь треугольника: ", Number(area));
   } catch (error) {
     console.log("ОШИБКА ОБРАБОТКИ ДАННЫХ");
   }
