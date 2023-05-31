@@ -22,12 +22,12 @@ class Triangle {
     this._hypotenuse = hypotenuse;
     this._perimeter = leg_1 + leg_2 + hypotenuse;
     this._half = this._perimeter * 0.5;
-    this._area = Math.sqrt(
+    this._area = Number(Math.sqrt(
       this._half *
       (this._half - leg_1) *
       (this._half - leg_2) *
       (this._half - hypotenuse)
-    ).toFixed(3);
+    ).toFixed(3));
 
     if (
       leg_1 + leg_2 < hypotenuse ||
