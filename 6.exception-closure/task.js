@@ -1,18 +1,19 @@
-function parseCount(avg) {
-  let mean = Number.parseFloat(avg);
-  if (Number.isNaN(mean)) {
+function parseCount(value) {
+  let parsedValue = Number.parseFloat(value);
+  if (Number.isNaN(parsedValue)) {
     throw new Error("Невалидное значение");
   }
-  return mean;
+  return parsedValue;
 }
 
-function validateCount() {
+function validateCount(value) {
   try {
-    console.log(parseCount());
+    return parseCount(value);
   } catch (error) {
-    console.log("ОШИБКА: Введено невалидное значение!!!");
+    return error;
   }
 }
+
 
 class Triangle {
   constructor(leg_1, leg_2, hypotenuse) {
