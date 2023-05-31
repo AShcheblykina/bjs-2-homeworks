@@ -17,25 +17,28 @@ function validateCount(value) {
 
 class Triangle {
   constructor(leg_1, leg_2, hypotenuse) {
+    if (
+      (leg_1 + leg_2 <= hypotenuse ||
+      leg_1 + hypotenuse <= leg_2 ||
+      leg_2 + hypotenuse <= leg_1) ||
+       (leg_1 === 0 || leg_2 === 0 || hypotenuse === 0)
+    ) {
+      throw new Error("Треугольник с такими сторонами не существует");
+    }
+    
     this._leg_1 = leg_1;
     this._leg_2 = leg_2;
     this._hypotenuse = hypotenuse;
     this._perimeter = leg_1 + leg_2 + hypotenuse;
     this._half = this._perimeter * 0.5;
-    this._area = Number(Math.sqrt(
-      this._half *
-      (this._half - leg_1) *
-      (this._half - leg_2) *
-      (this._half - hypotenuse)
-    ).toFixed(3));
-
-    if (
-      leg_1 + leg_2 < hypotenuse ||
-      leg_1 + hypotenuse < leg_2 ||
-      leg_2 + hypotenuse < leg_1
-    ) {
-      throw new Error("Треугольник с такими сторонами не существует");
-    }
+    this._area = Number(
+      Math.sqrt(
+        this._half *
+        (this._half - leg_1) *
+        (this._half - leg_2) *
+        (this._half - hypotenuse)
+      ).toFixed(3)
+    );
   }
 
   get perimeter() {
@@ -56,7 +59,7 @@ function getTriangle(leg_1, leg_2, hypotenuse) {
     console.log("Периметр треугольника: ", perimeter);
     console.log("Площадь треугольника: ", area);
   } catch (error) {
-    console.log("ОШИБКА ОБРАБОТКИ ДАННЫХ");
+    console.log("ОШИБКА ОБРАБОТКИ ДАННЫХ: ", error.message);
   }
 }
 
