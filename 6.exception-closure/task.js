@@ -16,33 +16,33 @@ function validateCount(value) {
 
 
 class Triangle {
-  constructor(leg_1, leg_2, hypotenuse) {
+  constructor(leg1, leg2, hypotenuse) {
     if (
-      (leg_1 + leg_2 < hypotenuse ||
-        leg_1 + hypotenuse < leg_2 ||
-        leg_2 + hypotenuse < leg_1) ||
-      (leg_1 === 0 || leg_2 === 0 || hypotenuse === 0)
+      (leg1 + leg2 < hypotenuse ||
+        leg1 + hypotenuse < leg2 ||
+        leg2 + hypotenuse < leg1) ||
+      (leg1 === 0 || leg2 === 0 || hypotenuse === 0)
     ) {
       throw new Error("Треугольник с такими сторонами не существует");
     }
 
-    this.leg_1 = leg_1;
-    this.leg_2 = leg_2;
+    this.leg1 = leg1;
+    this.leg2 = leg2;
     this.hypotenuse = hypotenuse;
   }
 
   get perimeter() {
-    return this.leg_1 + this.leg_2 + this.hypotenuse;
+    return this.leg1 + this.leg2 + this.hypotenuse;
   }
 
   get area() {
     const half = this.perimeter / 2;
     return +(
       Math.sqrt(
-        this.half *
-        (this.half - leg_1) *
-        (this.half - leg_2) *
-        (this.half - hypotenuse)
+        half *
+        (half - this.leg1) *
+        (half - this.leg2) *
+        (half - this.hypotenuse)
       ).toFixed(3)
     );
   }
