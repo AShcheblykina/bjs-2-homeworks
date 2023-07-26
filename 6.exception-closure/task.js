@@ -29,8 +29,6 @@ class Triangle {
     this.leg_1 = leg_1;
     this.leg_2 = leg_2;
     this.hypotenuse = hypotenuse;
-    this.perimeter = perimetr;
-    this.area = area;
   }
 
   get perimeter() {
@@ -38,7 +36,7 @@ class Triangle {
   }
 
   get area() {
-    const p = this.perimeter / 2;
+    const half = this.perimeter / 2;
     return Number(
       Math.sqrt(
         this.half *
