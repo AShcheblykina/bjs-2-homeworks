@@ -52,7 +52,7 @@ function getTriangle(leg_1, leg_2, hypotenuse) {
   try {
     return new Triangle(leg_1, leg_2, hypotenuse);
   }
-  catch (eror) {
+  catch (error) {
     return {
       get perimeter() {
         return 'Ошибка! Треугольник не существует';
