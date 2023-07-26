@@ -18,49 +18,51 @@ function validateCount(value) {
 class Triangle {
   constructor(leg_1, leg_2, hypotenuse) {
     if (
-      (leg_1 + leg_2 <= hypotenuse ||
-      leg_1 + hypotenuse <= leg_2 ||
-      leg_2 + hypotenuse <= leg_1) ||
-       (leg_1 === 0 || leg_2 === 0 || hypotenuse === 0)
+      (leg_1 + leg_2 < hypotenuse ||
+        leg_1 + hypotenuse < leg_2 ||
+        leg_2 + hypotenuse < leg_1) ||
+      (leg_1 === 0 || leg_2 === 0 || hypotenuse === 0)
     ) {
       throw new Error("Треугольник с такими сторонами не существует");
     }
-    
-    this._leg_1 = leg_1;
-    this._leg_2 = leg_2;
-    this._hypotenuse = hypotenuse;
-    this._perimeter = leg_1 + leg_2 + hypotenuse;
-    this._half = this._perimeter * 0.5;
-    this._area = Number(
-      Math.sqrt(
-        this._half *
-        (this._half - leg_1) *
-        (this._half - leg_2) *
-        (this._half - hypotenuse)
-      ).toFixed(3)
-    );
+
+    this.leg_1 = leg_1;
+    this.leg_2 = leg_2;
+    this.hypotenuse = hypotenuse;
   }
 
   get perimeter() {
-    return this._perimeter;
+    return this.leg_1 + this.leg_2 + this.hypotenuse;
   }
 
   get area() {
-    return this._area;
+    const p = this.perimeter / 2;
+    return Number(
+      Math.sqrt(
+        this.half *
+        (this.half - leg_1) *
+        (this.half - leg_2) *
+        (this.half - hypotenuse)
+      ).toFixed(3)
+    );
   }
 }
 
 function getTriangle(leg_1, leg_2, hypotenuse) {
   try {
-    let triangle = new Triangle(leg_1, leg_2, hypotenuse);
-    let perimeter = triangle.perimeter;
-    let area = triangle.area;
-
-    console.log("Периметр треугольника: ", perimeter);
-    console.log("Площадь треугольника: ", area);
-  } catch (error) {
-     console.log("Ошибка! Треугольник не существует", error.message);
+    return new Triangle(leg_1, leg_2, hypotenuse);
+  }
+  catch (eror) {
+    return {
+      get perimeter() {
+        return 'Ошибка! Треугольник не существует';
+      },
+      get area() {
+        return 'Ошибка! Треугольник не существует';
+      }
+    }
   }
 }
 
-getTriangle(4, 4, 1);
+
+getTriangle(4, 4, 5);
