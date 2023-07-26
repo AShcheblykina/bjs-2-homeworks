@@ -29,6 +29,8 @@ class Triangle {
     this.leg_1 = leg_1;
     this.leg_2 = leg_2;
     this.hypotenuse = hypotenuse;
+    this.perimeter = perimetr;
+    this.area = area;
   }
 
   get perimeter() {
